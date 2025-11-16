@@ -1,0 +1,126 @@
+/* Mobile Fixes for GRIT E-commerce */
+
+@media screen and (max-width: 768px) {
+    /* Mobile Menu Toggle */
+    .mobile-menu-toggle {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+        width: 30px;
+        height: 20px;
+        justify-content: space-between;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+
+    .mobile-menu-toggle span {
+        height: 3px;
+        width: 100%;
+        background: var(--primary-color);
+        transition: all 0.3s ease;
+    }
+
+    .main-nav ul {
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        flex-direction: column;
+        background: var(--white);
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 27px 0 rgba(0,0,0,0.05);
+        padding: 20px 0;
+        z-index: 999;
+    }
+
+    .main-nav ul.active {
+        left: 0;
+    }
+
+    .main-nav ul li {
+        margin: 15px 0;
+    }
+
+    .header-top {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .header-actions {
+        margin-top: 15px;
+        justify-content: center;
+    }
+
+    .hero-content h2 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .products-grid {
+        grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+    }
+
+    .product-actions {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .product-actions a,
+    .product-actions button {
+        width: 100%;
+    }
+
+    .footer-columns {
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard-container {
+        flex-direction: column;
+    }
+
+    .dashboard-sidebar {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        width: 95%;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .header-actions {
+        flex-wrap: wrap;
+    }
+
+    .search-box {
+        order: 3;
+        margin-top: 15px;
+        width: 100%;
+    }
+
+    .search-box input {
+        width: calc(100% - 50px);
+    }
+
+    .hero {
+        height: 60vh;
+    }
+
+    .form-container {
+        margin: 20px auto;
+        padding: 20px;
+    }
+}
